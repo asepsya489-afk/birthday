@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday ♡</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;padding:25px 16px;min-height:100vh;
+ font-family:Arial,sans-serif;text-align:center;color:#81445d;
+ background:linear-gradient(150deg,#fff5f9,#ffddea,#fff8fb);
+ overflow-x:hidden
+}
+main{max-width:520px;margin:auto}
+h1{font-family:Georgia,serif;color:#c0527d;font-size:38px}
+.card{
+ background:#ffffffd9;border:1px solid #f6c5d8;
+ border-radius:24px;padding:24px;margin:20px 0;
+ box-shadow:0 8px 25px #d68aa51c
+}
+button{
+ border:0;border-radius:30px;padding:13px 20px;margin:8px;
+ background:#d96f98;color:white;font-size:16px;cursor:pointer
+}
+#letter{display:none;text-align:left;line-height:1.9;white-space:pre-line}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photos img{width:100%;height:150px;object-fit:cover;border-radius:14px}
+.slot{background:#fff0f6;border:1px dashed #e9a5bf;border-radius:14px;padding:20px 5px}
+.heart{position:fixed;bottom:-30px;animation:float 4s linear forwards;pointer-events:none}
+@keyframes float{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+</style>
+</head>
+<body>
+<main>
+ <p>🎀 A LITTLE BIRTHDAY SURPRISE 🎀</p>
+ <h1>Happy Birthday,<br>My Bestie! ♡</h1>
+ <p>ada sesuatu buat kamu... jangan lupa senyum dulu yaa 🥹💗</p>
+
+ <section class="card">
+  <div style="font-size:48px">💌</div>
+  <h2>Surat kecil untuk kamu</h2>
+  <p>aku punya sesuatu yang mau aku bilang...</p>
+  <button onclick="bukaSurat()">Buka suratku 💗</button>
+  <div id="letter">Hapi bade! Ais may paporit percon🩱👙👙
+
+Kamu mesti nungguin cawet balenciaga limited edition eksklusif collab gumbal aku yang bagus dan keren, makasih ya nak temenan sm aku yang keren kece badai anjay slebew pacar Gymei. Yey sekarang kamu dah 17 tahun eyeyeyeyeyyeyeeyeeye cept cept bikin KTP nanti di usir kamu dari Jawa. Makasih banget selama ini kamu mau bantuin aku, bantuin garapin detik ekonomi ( hehe keknya km yang garap sih), pokoknya makasih. Apasi gw ga bisa bikin kata kata co, pokoknya makasih banget telah apa yang kita lalui bersama entah garap pr kek, aku nyontek kamu kek, mau jadi temen aku kek, mau  jadi orgil bareng, gembel bareng , dan nemenin aku beol, sama gitu gitu dah. 
+Makasih ya... Gwwssa ga bisa bikin kata kata co vwjscavsshgajsgsksgaihehehsv pokoknya gitu aku ngerasa seneng kalo ada kamu sampe aku rasanya lebih excited, pokoknya makasih.. Selama ini juga masih mau nemenin aku. 
+
+Dan maaf ya kalo aku ada salah sm kamu, kayak aku ga sengaja ngelakuin sampe kamu ngerasa sakit hati, maaf juga kalo aku selama ini agak freak✌🏼, maaf kalo aku kadang ga peka sama kmuy, maaf kalo aku kadang ngomong kasar. Maaf ya kalo aku ngomong kasar dan kamu sakit hati, selama ini aku ngomong kasar ga pernah bermaksud buat nyakitin , ga pernah pokoknya aku berkata kasar buat nyakitin kamu. 
+
+Oiya aku juga akan mendoakan mu baik baik, dan aku berdoa agar kamu keterima ptn sesuai mimpi mu itu, undip. Aku  berdoa pokoknya semoga kamu keterima undip karena kamu punya semangat di hatimu buat masuk ptn aku suka bgt ngeliat org semangat mengenai sesuatu
+Apalagi aku semangat kalo cinta gyomei😻😻😻😻😻
+Aku berdoa kamu jga akan sukses kelak nanti bersama impian impian mu ( kecuali pacarmu yg skizo), makasih mau bertahan sampai sini aku bangga dan senang melihatmu masih duduk di sampingku
+
+
+Pokoknya terimakasih, maaf dan aku mendoakan mu selalu.
+
+love uuu, jangan bosen-bosen temenan sama aku yaa 🫂💗</div>
+ </section>
+
+ <section class="card">
+  <h2>Our Little Memories 📸</h2>
+  <p>ganti kotak ini dengan foto kalian nanti yaa!</p>
+  <div class="photos">
+   <div class="slot">📷<br>Foto kita 1</div>
+   <div class="slot">🌷<br>Foto kita 2</div>
+   <div class="slot">🧸<br>Foto kita 3</div>
+   <div class="slot">💗<br>Foto kita 4</div>
+  </div>
+ </section>
+
+ <section class="card">
+  <div style="font-size:42px">🧁🌸💗</div>
+  <h2>One last thing...</h2>
+  <p>semoga dunia selalu baik sama kamu. kalau ada hari yang berat, jangan lupa kalau kamu berharga dan kamu nggak sendirian.</p>
+  <h3>Thank you for being my Favorite person/or bestie♡</h3>
+  <button onclick="hati(25)">Peluk virtual buat kamyu 🫂</button>
+ </section>
+ <p>made with love, just for you ♡</p>
+</main>
+<script>
+function bukaSurat(){
+ document.getElementById('letter').style.display='block';
+ hati(15);
+}
+function hati(n){
+ for(let i=0;i<n;i++){
+  let h=document.createElement('span');
+  h.className='heart';
+  h.textContent=['💗','💕','💖','🌸'][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(18+Math.random()*18)+'px';
+  h.style.animationDuration=(3+Math.random()*3)+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6500);
+ }
+}
+</script>
+</body>
+</html>
